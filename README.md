@@ -2,7 +2,7 @@
 # delion-english
 This is the repository of the Delion English project, which is written in PHP and Javascript. 
 
-*Attention: This project is a school project and it is NOT for commercial purposes.* 
+*Attention: This is a school project and it is NOT for commercial purposes.* 
 
 Author: Huynh Nhat Phu - 10STS (Facebook: นราวัฒน์ สุรพร)
 Tester: Nguyen Gia Bao, Nguyen Huynh Duc (10STS)
