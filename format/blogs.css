@@ -1,0 +1,20 @@
+@media all and (max-width: 400px){
+    .content-inside-lesson {display: block;height: auto;}
+    .content-inside-lesson-thumbnail {display: grid;width: 100%;}
+    .content-inside-lesson-img {height: 150px;display: flex;align-items: center;vertical-align: middle;}
+    .content-inside-lesson-img>img{margin: 0 auto;}
+    .content-inside-lesson-text-inside{margin-left: 0;margin-top: 10px;}
+}
+/*Feed Design*/
+.inner-content-inside-lesson{display: grid;grid-gap: 10px;}
+.content-inside-lesson{width: 100%;height: 150px;background-color: orange;position: relative;}
+.content-inside-lesson{display: flex;width: calc(100% - 20px);padding: 10px;}
+.content-inside-lesson-img{width: 30%;overflow: hidden;background-color: rgb(143, 120, 77);display: flex;align-items: center;vertical-align: middle;} 
+.content-inside-lesson-img>img{width:100%;margin: 0 auto;}
+.content-inside-lesson-text{width: 70%;}
+.content-inside-lesson-text-inside{margin-left: 10px;font-weight: initial;}
+.content-inside-lesson-text-inside > *{width: 100%;word-break: break-all;}
+.content-inside-lesson-text-header{font-size: 20px;font-weight: bold;}
+
+.inline-inner-a{width: 100%;height: 100%;display: block;;position: absolute;top: 0;left: 0;transition: 0.3s;}
+.inline-inner-a:hover{background: #ffffff38;transition: 0.3s;}

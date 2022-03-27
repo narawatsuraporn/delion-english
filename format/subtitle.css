@@ -1,0 +1,122 @@
+@font-face {
+        font-family: 'Segoe Static Light';
+        src: url("/fonts/s-static-light.ttf");
+}
+@font-face {
+        font-family: 'Segoe Semibold';
+        src: url("/fonts/s-smb.ttf");
+}
+@font-face {
+        font-family: 'Segoe Display Bold';
+        src: url("/fonts/s-dis-b.ttf");
+}
+@font-face {
+        font-family: 'Segoe Light';
+        src: url("/fonts/s-light.ttf");
+}
+
+html {
+    	overflow:auto;
+        overflow:initial;
+    	background-image: url("/images/back/wp.png");
+    	background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		min-height: 100%;
+		overflow:auto;
+    }
+body {
+  
+}
+
+@media all and (min-width: 0px)
+{
+	*{
+		font-family: Segoe Light;
+    }
+    
+    #container{
+		width: 100%;
+		height: 100%;	
+		overflow: auto;
+    }
+    #container{
+    	
+		height: 100%;
+	}
+	#menubar{
+		display: flex;
+  		flex-direction: row;
+  		justify-content: flex-start;
+		position:fixed;
+        top: 0px;
+		width: 100%;
+		height: 35px;
+		background-color: rgba(0,0,0,0.1);
+		font-family: Segoe Semibold;	
+	}
+	.inline{
+		width: 35px;
+		height: 35px;
+		margin-left: 5px;
+		display: flex;
+  		justify-content: center;
+  		align-items: center;
+	}
+	.inline img{
+		width: 75%;
+		height: 75%;
+		display: flex;
+  		justify-content: center;
+  		align-items: center;
+	}
+	#back{
+		color: white;
+		width: calc(100% - 60px);
+		background-color: rgba(0,0,0,0);
+		display: flex;
+  		justify-content:all;
+  		align-items: all;
+	}
+	.button-back{
+		position: fixed;
+		margin-right: 0;
+		color: white;
+		width: 35px;
+		height: 35px;
+		float: right;
+		background-color: rgba(0,0,0,0);
+		display: flex;
+  		justify-content: center;
+  		align-items: center;
+	}
+	#about-b{
+		right: 0;
+	}
+	#back-b{
+		right: 80px;
+	}
+	.button-back img{
+		width: 75%;
+		height: 75%;
+	}
+	#show-b{
+		position: fixed;
+		right: 40px;
+	}
+	#name-title{
+		position: fixed;
+		left: 45px;
+	}
+	#name-str{
+		font-family: segoe Semibold;
+	}
+	.name-inline{
+		display: inline-flex;
+	}
+	#icon:hover,.button-back:hover{
+		background-color: rgba(255,255,255,0.3);
+		transition: 0.3s
+	}
+
+}/*position: sticky;*/

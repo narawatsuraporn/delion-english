@@ -1,0 +1,164 @@
+.service-cc{
+	width: 100%;
+	height: 45px;
+}
+#inside{
+	width: 100%;
+	max-width: 1400px;
+	height: 100%;
+	margin: 0 auto
+}
+#service{
+	display: flex;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	height: 50px;
+	margin-left: 15px;
+}
+.service-inline{
+	display: inline;
+}
+.inline-service-cc{
+	display: inline;
+}
+.inline-service-icon{
+	display: inline;
+}
+.inline-service-icon{
+	display: inline;
+}
+#service-icon{
+	height: 30px;
+	width: 30px
+}
+#service-icon > img{
+	height: 30px;
+}
+#service-title{
+	width: auto;
+	margin-left: 5px
+}
+#cc-icon{
+	height: 30px
+}
+#cc-icon > img{
+	height: 30px
+}
+#cc{
+	display: flex;
+	right: 0;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	height: 50px;
+	margin-right: 10px;
+}
+.sepe{
+	width: 100%;
+	height: 1px;
+	background: linear-gradient(90deg, rgba(0,112,192,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 50%, rgba(0,160,255,0) 100%);
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.link-t > a,#copyright > a{
+	color: white;
+	transition: 0.3s
+}
+
+.link-t > a:hover, #copyright> a:hover{
+	color: rgb(255, 208, 0);
+	transition: 0.3s
+}
+#controls{
+	width: 100%;
+	display: inline-flex;
+	/*background-color: yellow*/
+}
+#copyright{
+	width: calc(100% - 2em);
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	word-break: break-word;
+	height: auto;
+	
+	/*background-color: yellow*/
+}
+
+
+.menu-controls{
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	height: 100%;
+}
+.ti{
+	font-family: segoe Semibold;
+	width: initial;
+}
+#menu-link{
+	display: inline-grid;
+	grid-template-columns: repeat(auto-fit,minmax(50px, 90px));
+	grid-gap: 1px;
+	margin-top: 10px;
+	margin-right: 10px
+}
+.link-t{
+	height: 20px;
+	position: relative;
+	width: max-content;
+	text-align: left;
+	margin-top: 5px
+}
+#footer {
+  background-color:rgba(0, 0, 0, 0.521);
+  height: auto;overflow: hidden;
+}
+a{
+	text-decoration: none;
+}
+@media all and (min-width: 375px)
+{
+	.inline-controls{
+		width: auto;
+		margin-right: 33px;
+		height: 100%;
+		display: inline;
+		/*background-color: red*/
+	}
+	#controls {
+	    width: 100%;
+	    display: inline-flex;
+	    /* background-color: yellow; */
+	}	
+}	
+@media all and (max-width: 374px)
+{
+	.inline-controls{
+		width: 100%;
+		height: 100%;
+		display: block;
+		
+		/*background-color: red*/
+	}
+	.inline-controls > div{
+		width: initial;
+		text-align: center;
+	}
+	.link-t {
+		
+		text-align: center;
+	}
+	.inline-title{
+		width: initial;
+	}
+	#controls {
+	    width: 100%;
+	    display: block;
+	    /* background-color: yellow; */
+	}	
+}

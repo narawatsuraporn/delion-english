@@ -1,0 +1,76 @@
+<div id="menubar" style="z-index:100"><a id="icon" class="inline" title="Tra từ điển Delion" href="/dict"><img src="/images/general-icon/icon-2.png"></a><div id="back" class="inline"><div id="name-title"><div id="name-n" class="name-inline">Delion</div><div id="name-str" class="name-inline">&nbsp;English</div></div><a class="button-back" id="back-b" href="/home" title="Về trang chủ"><img src="/images/general-icon/back.png"> </a><a class="button-back" id="about-b" href="/about" title="Giới thiệu"><img src="/images/general-icon/about.png"> </a><a class="button-back" id="show-b" href="/cpanel" title="Đăng nhập vào trang quản trị"><img src="/images/tools/login.png"></a></div></div><script type="text/javascript">let k = window.location.pathname;if (k.indexOf("/home") !== -1){$('#back-b').hide();}</script>
+<style>
+    .scrollButton, .openSubMenu{
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: rgb(227 113 31);
+        color: #fff;
+        font-size: 44px;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 0 5px 0px #444444;
+        transition: 300ms;
+        z-index: 50;
+        transform: scaleY(-1);
+        display: none;
+    }
+    .openSubMenu{
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
+    .scrollButton:hover,.openSubMenu:hover{
+        background-color: rgb(196, 98, 28);
+        transition: 300ms;
+    }
+    .scrollButton img, .openSubMenu img{
+        width: 30px;
+    }
+    .visible {
+        display: flex;
+        transition: 300ms;
+    }
+</style>
+<script>
+    window.addEventListener('scroll', e => {
+        if(window.scrollY > 100) {
+            $('.scrollButton').addClass('visible');
+        } else {
+            $('.scrollButton').removeClass('visible');
+        }
+    });
+
+    $(window).resize(function() {
+        var width = $(window).width();
+        if (width <= 700){
+            $('.openSubMenu').addClass('visible');
+            
+        } else {
+            $('.openSubMenu').removeClass('visible');
+            $('.openSubMenu').attr('opened',1);
+            $('.inner-content-main').removeClass('obj-hide');
+            $('.inner-content-submain').removeClass('obj-hide');
+            $('.inner-content-main').removeClass('obj-show');
+            $('.inner-content-submain').removeClass('obj-show');
+        }
+    });
+
+    $(document).ready(function() {
+        var width = $(window).width();
+        if (width <= 700){
+            $('.openSubMenu').addClass('visible');
+        } else {
+            $('.openSubMenu').removeClass('visible');
+            $('.openSubMenu').attr('opened',1);
+            $('.inner-content-main').removeClass('obj-hide');
+            $('.inner-content-submain').removeClass('obj-hide');
+            $('.inner-content-main').removeClass('obj-show');
+            $('.inner-content-submain').removeClass('obj-show');
+        }
+    });
+    
+</script> 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dongvan TV Online การแสดงสดด่งวัน</title>
+	<link rel="shortcut icon" href="image/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
+    <script type="text/javascript">
+    	function reqListener () {
+    		var x = document.getElementById("view-count");   // Get the element with id="demo"
+    		let i = parseFloat((this.responseText))+1;
+    		x.innerText = "There are " + i + " view(s) totally. ";
+    		var xhttp = new XMLHttpRequest();
+    		xhttp.open("POST", "https://talokhokchak.000webhostapp.com/tv-miennam/index.php?", true);
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhttp.send("cn="+"nickhd"+"&vc="+i);   		 //cartoonnet
+		}
+		var oReq = new XMLHttpRequest();
+		oReq.addEventListener("load", reqListener);
+		oReq.open("POST", "https://talokhokchak.000webhostapp.com/tv-miennam/main.php?", true);
+		oReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		oReq.send("cn=nickhd"); //cn=cartoonnet
+    </script>
+
+    <link href="format.css" rel="stylesheet">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="ava" class="inline"><img style="width: 100%;height: 100%;" src="image/icon-2.png"></div> 
+			<div id="namesite" class="inline"><span id="namesite-light">Dongvan&nbsp;</span> TV Online</div>
+			<a id="info" class="inline" href="../index/index.html">Back</a>
+		</div>
+		<div id="d-cover2"></div>
+		<div id="main">
+			<div id="form1">
+				<div id="title">
+					<div id="title-head">LIVE - Nick HD</div>
+					<div id="title-des">Nickelodeon (often shortened to Nick) is an American pay television channel which was first tested on December 1, 1977, until it eventually launched on April 1, 1979, as the first cable channel for children. It is owned by ViacomCBS through its domestic networks division and is based in New York City. The network's programming is primarily aimed at children aged 2–17, while some of its program blocks target a broader family audience.</div>
+					<p id="view-count" style="padding-left: 0px;"></p>
+					<p id="time-count" style="padding-left: 0px;"></p>
+				</div>
+			</div>			
+		</div>
+		<div id="d-cover2"></div>
+		<script type="text/javascript">
+		var cors="";//"https://corsanywhere.herokuapp.com/";	
+    	var hls_src=null;
+		$.ajax({
+				async: false,
+				type: "POST",
+				url: cors+"https://watchnewslive.tv/data.php",
+				data: {stream: 'Disney'}, 
+				success: function(response){
+				hls_src = cors+response;
+				}
+			});
+    	</script>
+			<div id="player" style="margin-top: 15px;width: 900px;"></div>
+			<script>
+				var player = new Clappr.Player({source: hls_src, parentId: "#player",width: '100%',width: '56%'});
+			</script>				
+		<div id="d-cover3"></div>
+		<div id="d-cover3"></div>
+		<div id="d-cover3"></div>
+		<style type="text/css">
+			::cue {
+			  font-family: Segoe Light;
+			  background: rgba(0,0,0,0);
+			  -webkit-text-stroke: 2px black;
+			  border: 1px solid blue;
+			}
+		</style>
+		<div id="main">
+			<div id="form1">
+				<div id="title">
+					<div id="title-head" style="font-size: 15px;">Choose other links if you can't watch with the current link.</div>
+					<div id="server-link">
+						 <a href="javascript:;" onclick="getlink('https://feed.play.mv/live/10005200/s5f1zEMJC1/master.m3u8')" title="Cartoon Network" class="button" id="b1">Link</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="d-cover3"></div>	
+		<div id="d-cover3"></div>
+		<div id="footer">
+		Copyright &copy; 2021 - present by <a href="http://namfone.ihostfull.com/"> &nbsp;Dongvan Technologies</a>.
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+

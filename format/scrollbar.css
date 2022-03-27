@@ -1,0 +1,28 @@
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(253, 233, 48);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 0;
+}
+html {
+	scrollbar-color: #00b0f0 transparent; /* thumb and track color */
+	scrollbar-width: thin;
+}
+.tv-description{
+	scrollbar-color: #00b0f0 transparent; /* thumb and track color */
+	scrollbar-width: thin;
+	
+}
+html {
+	scrollbar-color: #f0e000 transparent; /* thumb and track color */
+	scrollbar-width: thin;
+}
